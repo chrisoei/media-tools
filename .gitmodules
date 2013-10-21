@@ -1,0 +1,24 @@
+[submodule "x264"]
+	path = x264
+	url = git://git.videolan.org/x264.git
+[submodule "libvpx"]
+	path = libvpx
+	url = http://git.chromium.org/webm/libvpx.git
+[submodule "ffmpeg"]
+	path = ffmpeg
+	url = git://source.ffmpeg.org/ffmpeg.git
+[submodule "ogg"]
+	path = ogg
+	url = git://git.xiph.org/mirrors/ogg.git
+[submodule "vorbis"]
+	path = vorbis
+	url = git://git.xiph.org/mirrors/vorbis.git
+[submodule "fdk-aac"]
+	path = fdk-aac
+	url = https://github.com/mstorsjo/fdk-aac.git
+[submodule "opus"]
+	path = opus
+	url = git://git.xiph.org/opus.git
+[submodule "flac"]
+	path = flac
+	url = git://git.xiph.org/flac.git
