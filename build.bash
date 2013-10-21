@@ -22,6 +22,6 @@ make && sudo make install
 popd
 
 pushd ffmpeg
-./configure --disable-shared --enable-{gpl,nonfree,static,lib{fdk-aac,mp3lame,opus,vorbis,vpx,x264}}
+./configure --disable-shared --extra-ldflags=-static --enable-{gpl,nonfree,static,lib{fdk-aac,mp3lame,opus,vorbis,vpx,x264}}
 make && sudo make install
 popd
