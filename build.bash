@@ -1,5 +1,7 @@
 #!/bin/bash
 
+git submodule update --init
+
 for d in fdk-aac ogg vorbis flac opus
 do
   pushd "$d" 
@@ -19,3 +21,7 @@ pushd libvpx
 make && sudo make install
 popd
 
+pushd ffmpeg
+./configure --disable-shared --enable-{gpl,nonfree,static,lib{fdk-aac,mp3lame,opus,vorbis,vpx,x264}}
+make && sudo make install
+popd
