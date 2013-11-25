@@ -3,16 +3,16 @@
 #git submodule update --init
 
 #export STATIC_CONFIG="--enable-static --disable-shared --extra-ldflags=-static"
-export STATIC_CONFIG="--enable-static --disable-shared --prefix=/opt/media-tools"
 
-for d in fdk-aac ogg vorbis flac opus
-do
-  pushd "$d" 
+function do_module {
+  pushd "$1"
   [ -x ./autogen.sh ] && ./autogen.sh
-  ./configure $STATIC_CONFIG
+  ./configure --enable-static --disable-shared --prefix=/opt/media-tools $2
   make && make install
   popd
-done
+}
+
+
 
 pushd x264
 ./configure $STATIC_CONFIG --disable-cli --disable-opencl
