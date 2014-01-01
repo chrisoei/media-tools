@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo apt-get install yasm libmp3lame-dev
+
 git submodule update --init
 
 export STATIC_CONFIG="--enable-static --disable-shared --prefix=/opt/media-tools"
