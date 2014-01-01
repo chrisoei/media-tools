@@ -4,6 +4,8 @@ git submodule update --init
 
 export STATIC_CONFIG="--enable-static --disable-shared --prefix=/opt/media-tools"
 
+export PKG_CONFIG_PATH=/opt/media-tools/lib/pkgconfig
+
 for d in fdk-aac ogg vorbis flac opus
 do
   pushd "$d" 
