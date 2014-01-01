@@ -2,7 +2,7 @@
 
 git submodule update --init
 
-export STATIC_CONFIG="--enable-static --disable-shared --extra-ldflags=-static"
+export STATIC_CONFIG="--enable-static --disable-shared --prefix=/opt/media-tools"
 
 for d in fdk-aac ogg vorbis flac opus
 do
