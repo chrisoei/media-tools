@@ -24,6 +24,6 @@ make && make install
 popd
 
 pushd ffmpeg
-./configure $STATIC_CONFIG --enable-{gpl,nonfree,static,lib{fdk-aac,mp3lame,opus,vorbis,vpx,x264}}
+./configure $STATIC_CONFIG --enable-{gpl,nonfree,static,lib{fdk-aac,mp3lame,opus,vorbis,vpx,x264}} --extra-cflags=-I/opt/media-tools/include --extra-ldflags=-L/opt/media-tools/lib
 make && make install
 popd
